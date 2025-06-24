@@ -1,4 +1,6 @@
-# nexter_2025
+#Nexter 2025
+
+> A modern rebuild of the original **Nexter** project using the latest SCSS (`@use`/`@forward`) best practices. This project is a personal Sass learning recap!
 
 ```bash
 project-root/
