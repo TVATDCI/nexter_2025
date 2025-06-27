@@ -1,4 +1,4 @@
-@use "../abstract/variables" as vars;
+@use "../abstract" as vars;
 
 .features {
   grid-column: center-start / center-end;
