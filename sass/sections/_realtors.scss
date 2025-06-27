@@ -1,5 +1,7 @@
+@use "../abstract/variables" as vars;
+
 .realtors {
-  background-color: $color-secondary;
+  background-color: vars.$color-secondary;
   grid-column: col-start 7 / full-end;
   padding: 1rem 3rem;
 
@@ -25,7 +27,7 @@
 
   &__sold {
     text-transform: uppercase;
-    color: $color-grey-light-2;
+    color: vars.$color-grey-light-2;
     margin-top: -3px;
   }
 }
