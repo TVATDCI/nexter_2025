@@ -1,5 +1,6 @@
 // @use "../abstract" as *;
 @use "../abstract" as vars;
+// to avoid global name space (personal choice)
 
 *,
 *::before,

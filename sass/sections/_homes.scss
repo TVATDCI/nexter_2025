@@ -52,7 +52,7 @@
     text-align: center;
     padding: 1.25rem; // 1.25rem from all side!
     background-color: vars.$color-secondary;
-    color: #fff;
+    color: vars.$color-fff;
     font-weight: 400;
     // The last part is to set transform to translateY: to move it down 50% from its height
     transform: translateY(50%);
