@@ -1,0 +1,39 @@
+@use "../abstract/variables" as vars;
+
+.features {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); change grid-template added with auto-fit and minmax to keep the text box to max at 250px when it's minimised for the responsive design!*/
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+
+  /*The same case like icons, all items are set as grid/strech. align-items: start sets all the items(text) in features boxes to align from the start line*/
+  align-items: start;
+}
+
+// There 're 2 classes here. >> feature in FEATURES
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: vars.$color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+
+    grid-row: 1 / span 2;
+    transform: translateY(
+      -1rem
+    ); // as all items are set display: grid, transformY (-1rem) moves icon manually to align center with the heading
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}
