@@ -1,9 +1,11 @@
+@use "../abstract/variables" as vars;
+
 .header {
-  background-color: $color-grey-dark-1;
+  background-color: vars.$color-grey-dark-1;
   grid-column: full-start / col-end 6;
   background-image: linear-gradient(
-      rgba($color-secondary, 0.93),
-      rgba($color-secondary, 0.93)
+      rgba(vars.$color-secondary, 0.93),
+      rgba(vars.$color-secondary, 0.93)
     ),
     url(../img/hero.jpeg);
   background-size: cover;
@@ -35,7 +37,7 @@
     align-items: center;
 
     font-size: 1.6rem;
-    color: $color-grey-light-2;
+    color: vars.$color-grey-light-2;
 
     &::before,
     &::after {

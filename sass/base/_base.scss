@@ -1,5 +1,7 @@
+@use "../abstract" as *;
+
 *,
-*::before, // before & after psuedo element should inherit box-sizing property set to border-box: box-sizing in html.
+*::before,
 *::after {
   margin: 0;
   padding: 0;
@@ -8,7 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // The standard root font-size 16px (100%)= 1.6rem. It makes it easier or simpler to work with rem when you set root html font-size at 62.5% It is = 10px. By calc 100%(16px)=16px So 10px = 10/16 x 100(%)= 62.5% Now you can use 1rem=10px in the project!
+  font-size: 62.5%;
 }
 
 body {
@@ -18,20 +20,11 @@ body {
   line-height: 1.6;
 }
 
-/* container below could have been set inside the body. In order to make it cleaner more manageable. I added a class in the body as container*/
-
-// IN ORDER TO MINIMALISE CODING, IT IS IMPORTANT TO THINK & BUILD REPONSIVE DESIGN RIGHT FROM THE START WITH CSS GRID!!!
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); // 80vh indicates the height of the sidebar and surely min-content leaves the rest of the content which is left over from (grid-template-rows) the use of the sidebar to repeat 3 times(as set)in auto non-estatic-mode.
-
-  /*grid 8 columns layout
-    grid-template-columns: repeat(8, 1fr);
-} to full-bleed section in the middle of 8 cols below!!*/
-
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
     [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6rem, 1fr)
-    [full-end];
+    [center-end] minmax(6rem, 1fr) [full-end];
 }

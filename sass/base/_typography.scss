@@ -1,3 +1,4 @@
+@use "../abstract" as *;
 /*using place holder below to keep the repeated code in one place, added by @extend*/
 %heading {
   font-family: $font-display;
