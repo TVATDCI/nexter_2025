@@ -22,7 +22,8 @@
   transition: all 0.3s;
 
   &::before,
-  &::after {
+  &::after,
+  span {
     content: "";
     background-color: vars.$color-fff;
     height: 2px;
@@ -32,52 +33,63 @@
     transition: all 0.3s;
   }
 
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &::before {
-    top: -1.2rem;
+    top: 0;
   }
 
   &::after {
-    top: 1.2rem;
+    bottom: 0;
   }
 
   &.open {
-    background-color: transparent;
+    span {
+      opacity: 0;
+    }
 
     &::before {
       transform: rotate(45deg);
-      top: 0;
+      top: 50%;
     }
 
     &::after {
       transform: rotate(-45deg);
-      top: 0;
+      bottom: auto;
+      top: 50%;
     }
   }
 }
 
 .nav {
-  margin-top: 4rem;
-  display: none;
+  margin-top: 5rem;
+  opacity: 0;
+  transform: translateY(-2rem);
+  transition: all 0.3s ease;
+  pointer-events: none;
 
   &.open {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   &__list {
     list-style: none;
     padding: 0;
-    text-align: center;
   }
 
-  &__link {
-    color: vars.$color-fff;
-    text-decoration: none;
-    font-size: 1.6rem;
-    display: block;
-    margin: 1rem 0;
+  &__item {
+    margin-bottom: 2rem;
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.4rem;
+      text-transform: uppercase;
     }
   }
 }
