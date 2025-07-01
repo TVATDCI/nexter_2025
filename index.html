@@ -17,7 +17,9 @@
 
     <!--sidebar-->
     <div class="sidebar">
-        <button class="nav-btn" id="nav-btn"></button>
+        <button class="nav-btn" id="nav-btn">
+            <span class="nav-icon"></span>
+        </button>
         <nav class="nav" id="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
@@ -424,6 +426,17 @@
             on this project.
         </p>
     </footer>
+    <!--Script for burger menu in sidebar-->
+    <script>
+        const navBtn = document.getElementById("nav-btn");
+        const nav = document.getElementById("nav");
+
+        navBtn.addEventListener("click", () => {
+            navBtn.classList.toggle("open");
+            nav.classList.toggle("open");
+        });
+    </script>
+
 </body>
 
 </html>
