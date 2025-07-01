@@ -12,14 +12,12 @@
 }
 
 .nav-btn {
+  background-color: transparent;
   border: none;
-  background: none;
   cursor: pointer;
   position: relative;
-  height: 2px;
   width: 4.5rem;
-  background-color: vars.$color-fff;
-  transition: all 0.3s;
+  height: 4rem;
 
   &::before,
   &::after,
@@ -27,10 +25,10 @@
     content: "";
     background-color: vars.$color-fff;
     height: 2px;
-    width: 4.5rem;
+    width: 100%;
     position: absolute;
     left: 0;
-    transition: all 0.3s;
+    transition: all 0.4s;
   }
 
   span {
@@ -39,11 +37,21 @@
   }
 
   &::before {
-    top: 0;
+    top: 70%;
   }
 
   &::after {
-    bottom: 0;
+    bottom: 70%;
+  }
+
+  &:hover {
+    &::before {
+      top: 20%;
+    }
+
+    &::after {
+      bottom: 20%;
+    }
   }
 
   &.open {
@@ -52,12 +60,12 @@
     }
 
     &::before {
-      transform: rotate(45deg);
+      transform: rotate(315deg);
       top: 50%;
     }
 
     &::after {
-      transform: rotate(-45deg);
+      transform: rotate(-315deg);
       bottom: auto;
       top: 50%;
     }
@@ -86,7 +94,7 @@
     margin-bottom: 2rem;
 
     a {
-      color: #fff;
+      color: vars.$color-fff;
       text-decoration: none;
       font-size: 1.4rem;
       text-transform: uppercase;
