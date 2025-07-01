@@ -1,4 +1,4 @@
-#Nexter 2025
+# Nexter - 2025
 
 **A modern fully responsive landing page that I recap, rebuilt from original learning progress in early 2024 with Sass architecture and refactoring practice using modern features such as:**
 
