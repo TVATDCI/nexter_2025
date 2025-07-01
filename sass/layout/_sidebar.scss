@@ -16,12 +16,12 @@
   background-color: vars.$color-fff;
   height: 2px;
   width: 4.5rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 
   &::before,
   &::after {
     content: "";
-    background-color: vars.$color-fff;
+    background-color: vars.$color-f0606;
     height: 2px;
     width: 4.5rem;
     margin-top: 3rem;
@@ -29,9 +29,10 @@
   }
 
   &::before {
-    transform: translateY(-1rem);
+    transform: translateY(-1.5rem);
   }
   &::after {
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
+    background-color: green;
   }
 }

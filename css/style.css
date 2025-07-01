@@ -110,21 +110,22 @@ body {
   background-color: #fff;
   height: 2px;
   width: 4.5rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 .nav-btn::before, .nav-btn::after {
   content: "";
-  background-color: #fff;
+  background-color: #ef0606;
   height: 2px;
   width: 4.5rem;
   margin-top: 3rem;
   display: block;
 }
 .nav-btn::before {
-  transform: translateY(-1rem);
+  transform: translateY(-1.5rem);
 }
 .nav-btn::after {
-  transform: translateY(-2rem);
+  transform: translateY(-3rem);
+  background-color: green;
 }
 
 .header {
