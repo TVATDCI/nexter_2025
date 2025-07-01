@@ -1,6 +1,14 @@
 #Nexter 2025
 
-A modern rebuild of the original **Nexter** project using the latest SCSS (`@use`/`@forward`) best practices. This project is a personal Sass learning recap!
+**A modern fully responsive landing page that I recap, rebuilt from original learning progress in early 2024 with Sass architecture and refactoring practice using modern features such as:**
+
+- The Dart Sass compiler
+
+- Modular SCSS architecture (abstract, base, layout, sections)
+
+- @use and @forward to scope styles properly
+
+- Clean folder structure for scalable frontend design
 
 ```bash
 project-root/
