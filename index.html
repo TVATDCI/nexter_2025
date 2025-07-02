@@ -26,10 +26,13 @@
                 <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                 <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="#header" class="nav__link">Back</a></li>
+
+
             </ul>
         </nav>
     </div>
-    <header class=" header">
+    <header class=" header" id="header">
         <img src="img/logo.png" alt="Nexter logo" class="header__logo">
         <h3 class="heading-3">Your own home</h3>
         <h1 class="heading-1">The ultimate personal freedom</h1>
@@ -432,6 +435,7 @@
     <script>
         const navBtn = document.getElementById("nav-btn");
         const nav = document.getElementById("nav");
+        const navLinks = document.querySelectorAll(".nav__link");
 
         navBtn.addEventListener("click", () => {
             navBtn.classList.toggle("open");
