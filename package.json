@@ -1,14 +1,16 @@
 {
   "name": "nexter_2025",
   "version": "1.0.0",
-  "description": "nexter weboage",
+  "description": "nexter webpage",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass sass/main.scss css/style.css --style=expanded",
     "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
     "watch:sass": "sass sass/main.scss css/style.css --watch --style=expanded",
     "build:css": "npm-run-all compile:sass prefix:css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "deploy": "gh-pages -d ."
+
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/TVATDCI/nexter_2025#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^11.0.1",
     "sass": "^1.89.2"
