@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == largest {
+    @media only screen and (max-width: $bp-largest) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large {
+    @media only screen and (max-width: $bp-large) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium {
+    @media only screen and (max-width: $bp-medium) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small {
+    @media only screen and (max-width: $bp-small) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smallest {
+    @media only screen and (max-width: $bp-smallest) {
+      @content;
+    }
+  }
+}
