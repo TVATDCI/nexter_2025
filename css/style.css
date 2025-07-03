@@ -9,6 +9,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -27,6 +28,12 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [sidebar-start] 8rem [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
 }
 
 /*using place holder below to keep the repeated code in one place, added by @extend*/
@@ -111,6 +118,19 @@ body {
   padding-top: 4rem;
   position: relative;
 }
+@media only screen and (max-width: 75em) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+}
 
 .nav-btn {
   background-color: transparent;
@@ -119,7 +139,7 @@ body {
   position: sticky;
   top: 1rem;
   left: 1rem;
-  z-index: 10;
+  z-index: 100;
   width: 4.5rem;
   height: 4rem;
 }
@@ -158,8 +178,15 @@ body {
 }
 .nav-btn.open::after {
   transform: rotate(-315deg);
-  bottom: auto;
   top: 50%;
+  bottom: auto;
+}
+@media only screen and (max-width: 75em) {
+  .nav-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
 }
 
 .nav {
@@ -168,20 +195,29 @@ body {
   transform: translateY(-2rem);
   transition: all 0.5s ease;
   pointer-events: none;
+  position: sticky;
+  top: 6rem;
+  z-index: 10;
 }
 .nav.open {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  position: sticky;
-  top: 6rem;
-  left: 0;
-  z-index: 5;
-  background-color: transparent;
 }
 .nav__list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .nav__list {
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: -5.5rem;
+    margin-left: 5rem;
+  }
 }
 .nav__item {
   margin-bottom: 2rem;
@@ -192,6 +228,12 @@ body {
   text-decoration: none;
   font-size: 1.4rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 75em) {
+  .nav__item {
+    margin-bottom: 0;
+    background-color: transparent;
+  }
 }
 
 .header {
