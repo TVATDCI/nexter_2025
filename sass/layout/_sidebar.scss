@@ -95,8 +95,11 @@
   @include m.respond(largest) {
     position: fixed;
     top: 1rem;
-    right: 1rem;
-    left: auto;
+    left: 1rem;
+
+    // Ham-menu to the right
+    //right: 1rem;
+    //left: auto;
   }
 }
 

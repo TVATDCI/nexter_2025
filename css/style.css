@@ -185,8 +185,7 @@ body {
   .nav-btn {
     position: fixed;
     top: 1rem;
-    right: 1rem;
-    left: auto;
+    left: 1rem;
   }
 }
 
