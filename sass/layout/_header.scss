@@ -1,4 +1,5 @@
 @use "../abstract" as vars;
+@use "../abstract" as m;
 
 .header {
   background-color: vars.$color-grey-dark-1;
@@ -18,6 +19,10 @@
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center;
+
+  @include m.respond(medium) {
+    grid-column: 1 / -1;
+  }
 
   &__logo {
     height: 3rem;

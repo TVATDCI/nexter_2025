@@ -1,4 +1,5 @@
 @use "../abstract" as vars;
+@use "../abstract/" as m;
 
 .story {
   &__pictures {
@@ -18,7 +19,10 @@
     ); // using grid-template to divide story__pic into 6x1fr (100%/6fr)
     grid-template-columns: repeat(6, 1fr); // also with column = 6x6 grid cells
 
-    align-items: center; // aligning both imgs to ceter of their cell or grid-column&row decleared!
+    align-items: center; // aligning both imgs to ceter of their cell or grid-column&row declared.
+    @include m.respond(medium) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__img--1 {
@@ -26,6 +30,10 @@
     grid-row: 2 / 6; // once you use <img> not <div> in html the img will keep its aspect ratio. That means the
     grid-column: 2 / 6; // img with not be exxact(cell 2/6) how you declear them. IMG aspect ratioo is important! However, in this case, you want the img to be in the center of the picture container. It can simply solved by setting align-item: center (above)
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.7);
+
+    @include m.respond(medium) {
+      grid-column: 1 / 3;
+    }
   }
 
   &__img--2 {
@@ -41,7 +49,7 @@
     background-color: vars.$color-grey-light-1;
     grid-column: col-start 5 / full-end;
 
-    padding: 6rem 8vw; // (L-R 8vw) is used for more flexibility of reponsive design
+    padding: 6rem 8vw; // (L-R 8vw) is used for more flexibility of responsive design
 
     /* You can add flex into grid layout!
         display: flex;
@@ -56,6 +64,11 @@
     align-content: center;
     // instead of using align-item: flex-start, but justify-items in grid
     justify-items: start;
+
+    @include m.respond(medium) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {

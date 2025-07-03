@@ -13,7 +13,7 @@
   position: relative;
 
   // Responsive layout override (same structure as .container in base)
-  @include m.respond(largest) {
+  @include m.respond(large) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     flex-direction: row;
@@ -92,7 +92,7 @@
     }
   }
 
-  @include m.respond(largest) {
+  @include m.respond(large) {
     position: fixed;
     top: 1rem;
     left: 1rem;
@@ -130,7 +130,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include m.respond(largest) {
+    @include m.respond(large) {
       flex-direction: row;
       gap: 2rem;
       margin-top: -5.5rem;
@@ -149,7 +149,7 @@
       text-transform: uppercase;
     }
 
-    @include m.respond(largest) {
+    @include m.respond(large) {
       margin-bottom: 0;
     }
   }
