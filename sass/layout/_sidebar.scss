@@ -95,7 +95,8 @@
   @include m.respond(largest) {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
+    left: auto;
   }
 }
 
@@ -147,7 +148,6 @@
 
     @include m.respond(largest) {
       margin-bottom: 0;
-      background-color: transparent;
     }
   }
 }
