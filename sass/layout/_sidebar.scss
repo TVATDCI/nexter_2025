@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   position: relative;
 
   // Responsive layout override (same structure as .container in base)
@@ -21,6 +21,7 @@
     align-items: center;
     padding: 3rem 2rem;
     position: sticky;
+
     top: 0;
     z-index: 100;
   }

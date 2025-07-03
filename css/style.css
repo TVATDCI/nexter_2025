@@ -32,7 +32,7 @@ body {
 @media only screen and (max-width: 62.5em) {
   .container {
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 8rem [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [sidebar-start] [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
 @media only screen and (max-width: 50em) {
@@ -120,7 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   position: relative;
 }
 @media only screen and (max-width: 62.5em) {
@@ -389,6 +389,11 @@ body {
   grid-template-columns: min-content 1fr;
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
+}
+@media only screen and (max-width: 50em) {
+  .feature {
+    grid-column: 1/-1;
+  }
 }
 .feature__icon {
   fill: #c69963;
