@@ -5,6 +5,7 @@
   &__pictures {
     background-color: vars.$color-primary;
     grid-column: full-start / col-end 4;
+    border: solid red 2px;
 
     background-image: linear-gradient(
         rgba(vars.$color-primary, 0.5),
@@ -22,6 +23,7 @@
     align-items: center; // aligning both imgs to ceter of their cell or grid-column&row declared.
     @include m.respond(medium) {
       grid-column: 1 / -1;
+      padding: 6rem;
     }
   }
 
@@ -32,7 +34,8 @@
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.7);
 
     @include m.respond(medium) {
-      grid-column: 1 / 3;
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
     }
   }
 
@@ -42,12 +45,18 @@
     grid-column: 4 / 7;
     z-index: 20; // to make the 15% extra of the img, z-index must be set to higher above both containers!
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.7);
+
+    @include m.respond(medium) {
+      grid-row: 1 / -1;
+      width: 100%;
+    }
   }
   /*above & below are set up as grid-items using sass style decoration, as block-element without a parent blocks to identify it as a part of story pic&content blocks!*/
 
   &__content {
     background-color: vars.$color-grey-light-1;
     grid-column: col-start 5 / full-end;
+    border: solid greenyellow 2px;
 
     padding: 6rem 8vw; // (L-R 8vw) is used for more flexibility of responsive design
 

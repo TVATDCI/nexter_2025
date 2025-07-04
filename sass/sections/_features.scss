@@ -3,6 +3,7 @@
 
 .features {
   grid-column: center-start / center-end;
+  border: solid black 2px;
 
   margin: 15rem 0;
 
@@ -22,10 +23,6 @@
 
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
-
-  @include m.respond(medium) {
-    grid-column: 1 / -1;
-  }
 
   &__icon {
     fill: vars.$color-primary;

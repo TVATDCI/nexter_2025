@@ -12,10 +12,11 @@
   padding-top: 2rem;
   position: relative;
 
-  // Responsive layout override (same structure as .container in base)
+  // Topbar Responsive layout override (same structure as .container in base)
   @include m.respond(large) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
