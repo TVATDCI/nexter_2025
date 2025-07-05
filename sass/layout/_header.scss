@@ -21,7 +21,7 @@
   justify-content: center;
 
   @include m.respond(medium) {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; //
   }
 
   @include m.respond(small) {

@@ -26,6 +26,10 @@
     @include m.respond(medium) {
       grid-template-columns: repeat(3, min-content max-content);
     }
+
+    @include m.respond(small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
