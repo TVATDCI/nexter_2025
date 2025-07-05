@@ -5,7 +5,6 @@
   &__pictures {
     background-color: vars.$color-primary;
     grid-column: full-start / col-end 4;
-    border: solid red 2px;
 
     background-image: linear-gradient(
         rgba(vars.$color-primary, 0.5),
@@ -59,7 +58,6 @@
   &__content {
     background-color: vars.$color-grey-light-1;
     grid-column: col-start 5 / full-end;
-    border: solid greenyellow 2px;
 
     padding: 6rem 8vw; // (L-R 8vw) is used for more flexibility of responsive design
 
