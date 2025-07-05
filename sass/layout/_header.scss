@@ -24,6 +24,10 @@
     grid-column: 1 / -1;
   }
 
+  @include m.respond(small) {
+    padding: 5rem;
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center;
