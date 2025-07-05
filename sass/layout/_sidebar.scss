@@ -35,50 +35,53 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  position: sticky;
+  position: fixed;
   top: 1rem;
   left: 1rem;
   z-index: 100;
   width: 4.5rem;
   height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  .nav-icon,
   &::before,
-  &::after,
-  span {
+  &::after {
     content: "";
     background-color: vars.$color-fff;
     height: 2px;
     width: 100%;
     position: absolute;
     left: 0;
-    transition: all 0.4s;
+    transition: all 0.4s ease;
   }
 
-  span {
+  .nav-icon {
     top: 50%;
     transform: translateY(-50%);
   }
 
   &::before {
-    top: 70%;
+    top: 0.8rem;
   }
 
   &::after {
-    bottom: 70%;
+    bottom: 0.8rem;
   }
 
   &:hover {
     &::before {
-      top: 20%;
+      top: 0.6rem;
     }
 
     &::after {
-      bottom: 20%;
+      bottom: 0.6rem;
     }
   }
 
   &.open {
-    span {
+    .nav-icon {
       opacity: 0;
     }
 
@@ -96,12 +99,12 @@
 
   @include m.respond(large) {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    // top: 2rem;
+    //left: 2rem;
 
     // Ham-menu to the right
-    //right: 1rem;
-    //left: auto;
+    right: 2rem;
+    left: auto;
   }
 }
 

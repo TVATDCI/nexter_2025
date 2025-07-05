@@ -423,40 +423,42 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  position: sticky;
+  position: fixed;
   top: 1rem;
   left: 1rem;
   z-index: 100;
   width: 4.5rem;
   height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.nav-btn::before, .nav-btn::after,
-.nav-btn span {
+.nav-btn .nav-icon, .nav-btn::before, .nav-btn::after {
   content: "";
   background-color: #fff;
   height: 2px;
   width: 100%;
   position: absolute;
   left: 0;
-  transition: all 0.4s;
+  transition: all 0.4s ease;
 }
-.nav-btn span {
+.nav-btn .nav-icon {
   top: 50%;
   transform: translateY(-50%);
 }
 .nav-btn::before {
-  top: 70%;
+  top: 0.8rem;
 }
 .nav-btn::after {
-  bottom: 70%;
+  bottom: 0.8rem;
 }
 .nav-btn:hover::before {
-  top: 20%;
+  top: 0.6rem;
 }
 .nav-btn:hover::after {
-  bottom: 20%;
+  bottom: 0.6rem;
 }
-.nav-btn.open span {
+.nav-btn.open .nav-icon {
   opacity: 0;
 }
 .nav-btn.open::before {
@@ -471,8 +473,8 @@ body {
 @media only screen and (max-width: 62.5em) {
   .nav-btn {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    right: 2rem;
+    left: auto;
   }
 }
 
