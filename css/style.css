@@ -418,7 +418,6 @@ body {
 @media only screen and (max-width: 50em) {
   .story__pictures {
     grid-column: 1/-1;
-    padding: 6rem;
   }
 }
 .story__img--1 {
