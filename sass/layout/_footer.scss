@@ -1,13 +1,17 @@
-@use "../abstract/variables" as vars;
+@use "../abstract" as vars;
 
 .footer {
   background-color: vars.$color-secondary;
   grid-column: full-start / full-end;
-  padding: 4rem;
+  padding: 8rem;
+
+  // debugging code!
+  min-height: 10rem;
+  border: 2px solid red;
 }
 
 .nav {
-  list-style: none; /*as same as you do it with text.decoration: none. But it is for ul>li */
+  list-style: none;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -17,30 +21,29 @@
   &__link:link,
   &__link:visited {
     font-size: 1.4rem;
-    color: vars.$color-fff;
+    color: #fff;
     text-decoration: none;
     font-family: vars.$font-display;
     text-transform: uppercase;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     display: block;
     transition: all 0.2s;
-
-    background-color: rgba(vars.$color-fff, 0.5);
   }
 
   &__link:hover,
   &__link:active {
-    background-color: rgba(vars.$color-fff, 0.5);
+    background-color: rgba(#fff, 0.05);
     transform: translateY(-3px);
   }
-}
+} // ✅ THIS was missing!
 
 .copyright {
   font-size: 1.4rem;
   color: vars.$color-grey-light-2;
   margin-top: 6rem;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   text-align: center;
+  width: 70%;
 }
