@@ -37,7 +37,7 @@ body {
 }
 @media only screen and (max-width: 50em) {
   .container {
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content 40vw repeat(3, min-content);
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
 
@@ -375,7 +375,6 @@ body {
 
 .features {
   grid-column: center-start/center-end;
-  border: solid black 2px;
   margin: 15rem 0;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); change grid-template added with auto-fit and minmax to keep the text box to max at 250px when it's minimised for the responsive design!*/
@@ -410,6 +409,7 @@ body {
   grid-column: full-start/col-end 4;
   border: solid red 2px;
   background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  background-size: cover;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
@@ -418,6 +418,7 @@ body {
 @media only screen and (max-width: 50em) {
   .story__pictures {
     grid-column: 1/-1;
+    padding: 2rem;
   }
 }
 .story__img--1 {
@@ -430,6 +431,7 @@ body {
   .story__img--1 {
     grid-column: 1/5;
     grid-row: 1/-1;
+    opacity: 0.5;
   }
 }
 .story__img--2 {
