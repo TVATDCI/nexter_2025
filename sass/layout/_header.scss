@@ -20,13 +20,8 @@
   grid-row-gap: 1.5rem;
   justify-content: center;
 
-  @include m.respond(large) {
-    border: solid red 2px;
-  }
-
   @include m.respond(medium) {
     grid-column: 1 / -1;
-    border: solid red 2px;
   }
 
   @include m.respond(small) {

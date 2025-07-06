@@ -536,15 +536,9 @@ body {
   justify-content: center;
   /*create grid out of just one element with before and after, now it is 3 items in seenon-text!*/
 }
-@media only screen and (max-width: 62.5em) {
-  .header {
-    border: solid red 2px;
-  }
-}
 @media only screen and (max-width: 50em) {
   .header {
     grid-column: 1/-1;
-    border: solid red 2px;
   }
 }
 @media only screen and (max-width: 37.5em) {
