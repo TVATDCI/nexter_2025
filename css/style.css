@@ -32,7 +32,7 @@ body {
 @media only screen and (max-width: 62.5em) {
   .container {
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: [sidebar-start] [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
 @media only screen and (max-width: 50em) {
@@ -536,9 +536,15 @@ body {
   justify-content: center;
   /*create grid out of just one element with before and after, now it is 3 items in seenon-text!*/
 }
+@media only screen and (max-width: 62.5em) {
+  .header {
+    border: solid red 2px;
+  }
+}
 @media only screen and (max-width: 50em) {
   .header {
     grid-column: 1/-1;
+    border: solid red 2px;
   }
 }
 @media only screen and (max-width: 37.5em) {
